@@ -1,5 +1,8 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Food Delivery Ecosystem - Project Initialized");
+        // Run UI in Event Dispatch Thread
+        javax.swing.SwingUtilities.invokeLater(() -> {
+            new ui.MainJFrame().setVisible(true);
+        });
     }
 }
